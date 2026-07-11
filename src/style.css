@@ -1,0 +1,234 @@
+@import "tailwindcss";
+
+@theme {
+  /* Colors */
+  --color-white: hsl(0 100% 100%);
+  --color-grey: hsl(232 10% 56%);
+  --color-blue-900: hsl(233 54% 16%);
+  --color-blue-600: hsl(234 25% 52%);
+  --color-pink-600: hsl(341 92% 62%);
+  --color-pink-300: hsl(341 100% 83%);
+
+  /* Gradient pink */
+  --color-pink-one: hsl(13 100% 64%);
+  --color-pink-two: hsl(322 87% 55%);
+
+  /* Gradient purple */
+  --color-purple-one: hsl(237 100% 64%);
+  --color-purple-two: hsl(322 87% 55%);
+
+  /* Typography */
+  --font-base: "Plus Jakarta Sans", sans-serif;
+
+  --text-100: 16px;
+  --text-200: 18px;
+  --text-300: 24px;
+  --text-400: 32px;
+  --text-500: 40px;
+  --text-600: 56px;
+  --text-20: 20px;
+
+  --leading-120: 1.2;
+  --leading-150: 1.5;
+
+  --tracking-0: 0px;
+
+  /* Spacing */
+  --spacing-0: 0;
+  --spacing-100: 8px;
+  --spacing-150: 12px;
+  --spacing-200: 16px;
+  --spacing-250: 20px;
+  --spacing-300: 24px;
+  --spacing-400: 32px;
+  --spacing-500: 40px;
+  --spacing-550: 44px;
+  --spacing-600: 48px;
+  --spacing-700: 56px;
+  --spacing-800: 64px;
+  --spacing-1000: 80px;
+  --spacing-1600: 128px;
+  --spacing-1800: 144px;
+
+  /* Breakpoints */
+  --breakpoint-md: 48rem;
+  --breakpoint-lg: 64rem;
+
+  --radius-15: 15px;
+
+  --shadow-stat: 0 34px 54px hsl(233 92% 29% / 0.1589);
+  --shadow-course: 0 25px 50px hsl(233 92% 29% / 0.0442);
+}
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply font-base;
+  }
+
+  .skip-link {
+    @apply sr-only focus:not-sr-only focus:absolute focus:left-200 focus:top-200 focus:z-50 focus:rounded-full focus:bg-white focus:px-300 focus:py-200 focus:text-blue-900 focus:shadow-lg;
+  }
+
+  .button {
+    @apply inline-flex justify-center font-bold text-200 text-white leading-150 rounded-full;
+  }
+
+  .page-shell {
+    @apply overflow-x-hidden;
+  }
+
+  .main-content {
+    @apply max-w-[80rem] mx-auto;
+  }
+
+  .hero {
+    @apply px-250 md:px-550 lg:px-1000 py-800 md:grid md:grid-cols-2 md:gap-x-300;
+  }
+
+  .hero__content {
+    @apply md:my-auto;
+
+    .hero__title {
+      @apply font-extrabold text-500 lg:text-600 leading-120 text-blue-900;
+    }
+
+    .hero__description {
+      @apply font-medium text-200 leading-150 text-grey mt-300;
+    }
+
+    .button {
+      @apply px-400 py-200 mt-500 transition;
+    }
+  }
+
+  .hero__media {
+    @apply relative flex justify-center items-center px-500 py-400 md:pt-0 md:-mt-300;
+
+    .hero__image {
+      @apply rounded-full overflow-hidden w-full h-full max-w-[15.8125rem] max-h-[15.8125rem] md:w-[13.5rem] lg:w-[19.8125rem] md:h-[23.875rem] lg:h-[35rem] md:max-h-[23.875rem] lg:max-h-[35rem] lg:max-w-[19.8125rem];
+    }
+
+    /* Rectangle gradient purple */
+    .hero__image {
+      @apply md:after:content-[''] md:after:absolute md:after:z-[-1] md:after:left-1/2 md:after:-translate-x-1/2 md:after:bottom-[2rem] md:after:rounded-full md:after:w-[13.5rem] lg:after:w-[19.8125rem] md:after:min-h-[43.125rem] lg:after:min-h-[2008px] after:bg-linear-to-b after:from-purple-one after:to-purple-two after:rotate-45 md:after:origin-[50%_calc(100%-calc(13.5rem/2))] lg:after:origin-[50%_calc(100%-calc(19.8125rem/2))];
+    }
+
+    img {
+      @apply md:w-full md:h-full md:object-contain md:object-bottom;
+    }
+
+    .stat {
+      @apply flex flex-col gap-y-[.4375rem] bg-white rounded-[.625rem] px-250 py-200 shadow-stat;
+    }
+
+    dt {
+      @apply font-bold text-[.875rem] lg:text-100 leading-120 text-grey;
+    }
+
+    dd {
+      @apply font-extrabold text-400 lg:text-500 leading-120 text-blue-900;
+    }
+
+    .stat-first {
+      @apply absolute w-full max-w-[9.6875rem] lg:max-w-[12.4375rem] left-1/2 bottom-0 -translate-x-full lg:translate-x-[calc(-100%-5rem)] lg:translate-y-[-5.4375rem];
+    }
+
+    .stat-second {
+      @apply absolute lg:w-full lg:max-w-[155px] left-1/2 top-0 translate-x-[4.1875rem] lg:translate-x-[7.375rem] lg:translate-y-[7.9375rem];
+    }
+  }
+
+  .courses {
+    @apply px-250 md:px-550 lg:px-1000 pt-800 pb-1000 md:pb-1800;
+
+    .courses__intro {
+      @apply font-extrabold text-300 lg:text-400 leading-120 text-white p-400 md:pt-800 md:mt-[1.75rem] rounded-15;
+    }
+
+    .courses__title {
+      @apply max-w-[16.9375rem];
+    }
+
+    .courses__grid {
+      @apply flex flex-col gap-y-400 md:grid md:grid-cols-2 md:gap-x-300 lg:grid-cols-3 lg:gap-x-400 lg:gap-y-700;
+    }
+  }
+}
+
+@layer components {
+  /* Header component */
+  .header {
+    @apply max-w-[80rem] mx-auto;
+
+    @apply flex justify-between items-center px-250 md:px-550 lg:px-1000 py-200;
+
+    img {
+      @apply h-250;
+    }
+
+    .button {
+      @apply px-400 md:px-300 py-200 md:py-[.6563rem] lg:py-200;
+    }
+  }
+
+  /* Course component */
+  .course {
+    @apply bg-white rounded-15 pt-[calc(3.5rem/2)] shadow-course;
+
+    .course__container {
+      @apply relative flex flex-col gap-y-300 bg-white rounded-15 px-400 pt-800 pb-500;
+    }
+
+    .course__icon {
+      @apply absolute top-0 left-0 translate-y-[-50%];
+    }
+
+    .course__title {
+      @apply font-extrabold text-20 lg:text-300 leading-120 text-blue-900;
+    }
+
+    .course__description {
+      @apply font-medium text-100 md:text-200 leading-150 text-grey;
+    }
+
+    .course__link {
+      @apply font-bold text-200 leading-150 text-pink-600 self-start hover:text-pink-300 hover:translate-y-[-2px] focus-visible:text-pink-300 transition-colors transition-transform duration-200;
+    }
+  }
+
+  /* Footer component */
+
+  .footer {
+    @apply bg-blue-900;
+
+    .footer__container {
+      @apply max-w-[80rem] flex justify-between items-center px-250 md:px-550 lg:px-1000 py-300 bg-blue-900 mx-auto;
+    }
+
+    .button {
+      @apply px-400 py-200;
+    }
+  }
+}
+
+@layer utilities {
+  .button-blue {
+    @apply bg-blue-900 transition-colors transition-transform duration-200 hover:bg-blue-600 hover:translate-y-[-2px];
+  }
+
+  .button-primary {
+    @apply bg-linear-to-b from-pink-one to-pink-two transition-transform transition-opacity duration-200  hover:translate-y-[-2px] hover:opacity-[0.7];
+  }
+
+  .button-secondary {
+    @apply bg-linear-to-b from-purple-one to-purple-two transition-transform transition-opacity duration-200  hover:translate-y-[-2px] hover:saturate-50 hover:brightness-150;
+  }
+
+  .bg-gradient-pink {
+    @apply bg-linear-to-b from-pink-one to-pink-two;
+  }
+}
