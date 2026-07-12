@@ -177,14 +177,14 @@
 
   /* Course component */
   .course {
-    @apply bg-white rounded-15 pt-[calc(3.5rem/2)] shadow-course;
+    @apply pt-[calc(3.5rem/2)];
 
     .course__container {
-      @apply relative flex flex-col gap-y-300 bg-white rounded-15 px-400 pt-800 pb-500;
+      @apply relative h-full flex flex-col gap-y-300 bg-white rounded-15 px-400 pt-800 pb-500 shadow-course;
     }
 
     .course__icon {
-      @apply absolute top-0 left-0 translate-y-[-50%];
+      @apply absolute top-0 left-400 translate-y-[-50%];
     }
 
     .course__title {
@@ -196,7 +196,7 @@
     }
 
     .course__link {
-      @apply font-bold text-200 leading-150 text-pink-600 self-start hover:text-pink-300 hover:translate-y-[-2px] focus-visible:text-pink-300 transition-colors transition-transform duration-200;
+      @apply mt-auto font-bold text-200 leading-150 text-pink-600 self-start hover:text-pink-300 hover:translate-y-[-2px] focus-visible:text-pink-300 transition-colors transition-transform duration-200;
     }
   }
 
