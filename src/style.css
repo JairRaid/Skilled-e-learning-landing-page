@@ -57,7 +57,7 @@
   --radius-15: 15px;
 
   --shadow-stat: 0 34px 54px hsl(233 92% 29% / 0.1589);
-  --shadow-course: 0 25px 50px hsl(233 92% 29% / 0.0442);
+  --shadow-course: 0 25px 50px hsl(233 92% 29% / 0.05);
 }
 
 @layer base {
