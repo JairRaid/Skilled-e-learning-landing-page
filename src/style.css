@@ -196,7 +196,7 @@
     }
 
     .course__link {
-      @apply mt-auto font-bold text-200 leading-150 text-pink-600 self-start hover:text-pink-300 hover:translate-y-[-2px] focus-visible:text-pink-300 transition-colors transition-transform duration-200;
+      @apply mt-auto font-bold text-200 leading-150 text-pink-600 self-start hover:text-pink-300 hover:translate-y-[-2px] focus-visible:text-pink-300 transition duration-200;
     }
   }
 
@@ -217,15 +217,15 @@
 
 @layer utilities {
   .button-blue {
-    @apply bg-blue-900 transition-colors transition-transform duration-200 hover:bg-blue-600 hover:translate-y-[-2px];
+    @apply bg-blue-900 transition duration-200 hover:bg-blue-600 hover:translate-y-[-2px];
   }
 
   .button-primary {
-    @apply bg-linear-to-b from-pink-one to-pink-two transition-transform transition-opacity duration-200  hover:translate-y-[-2px] hover:opacity-[0.7];
+    @apply bg-linear-to-b from-pink-one to-pink-two transition duration-200  hover:translate-y-[-2px] hover:opacity-[0.7];
   }
 
   .button-secondary {
-    @apply bg-linear-to-b from-purple-one to-purple-two transition-transform transition-opacity duration-200  hover:translate-y-[-2px] hover:saturate-50 hover:brightness-150;
+    @apply bg-linear-to-b from-purple-one to-purple-two transition duration-200  hover:translate-y-[-2px] hover:saturate-50 hover:brightness-150;
   }
 
   .bg-gradient-pink {
