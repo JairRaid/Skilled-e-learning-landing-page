@@ -114,7 +114,7 @@
 
     /* Rectangle gradient purple */
     .hero__image {
-      @apply md:after:content-[''] md:after:absolute md:after:z-[-1] md:after:left-1/2 md:after:-translate-x-1/2 md:after:bottom-[2rem] md:after:rounded-full md:after:w-[13.5rem] lg:after:w-[19.8125rem] md:after:min-h-[43.125rem] lg:after:min-h-[2008px] after:bg-linear-to-b after:from-purple-one after:to-purple-two after:rotate-45 md:after:origin-[50%_calc(100%-calc(13.5rem/2))] lg:after:origin-[50%_calc(100%-calc(19.8125rem/2))];
+      @apply md:after:content-[''] md:after:absolute md:after:z-[-1] md:after:left-1/2 md:after:-translate-x-1/2 md:after:bottom-[2rem] md:after:rounded-full md:after:w-[13.5rem] lg:after:w-[19.8125rem] md:after:min-h-[43.125rem] lg:after:min-h-[1008px] after:bg-linear-to-b after:from-purple-one after:to-purple-two after:rotate-45 md:after:origin-[50%_calc(100%-calc(13.5rem/2))] lg:after:origin-[50%_calc(100%-calc(19.8125rem/2))];
     }
 
     img {
